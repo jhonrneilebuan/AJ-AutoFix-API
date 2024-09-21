@@ -83,6 +83,11 @@ const userUpdate = async (req, res) => {
   try {
     const userId = req.params.id; 
     const updateData = req.body; 
+    const profilePictureUrl = req.fileUrl || null; 
+
+    if (profilePictureUrl) {
+      updateData.profilePicture = profilePictureUrl;
+    }
 
     const user = await User.findByIdAndUpdate(userId, updateData, {
       new: true,
@@ -102,6 +107,7 @@ const userUpdate = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
 
 
 
