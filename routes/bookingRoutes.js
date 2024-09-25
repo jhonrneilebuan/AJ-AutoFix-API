@@ -41,7 +41,7 @@ bookingRouter.get(
   getAllAcceptedBookingById
 );
 
-bookingRouter.post("/bookings", auth, createBooking);
+bookingRouter.post("/bookings/:id", auth, createBooking);
 
 bookingRouter.put("/bookings/:id", auth, validateObjectId, updateBooking);
 
