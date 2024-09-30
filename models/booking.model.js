@@ -33,7 +33,7 @@ const bookingSchema = new mongoose.Schema({
       "Timing Belt",
       "Tire Replacement",
       "Wheel Alignment",
-      "Break Pad Set",
+      "Brake Pad Set",
       "Brake Fluid",
       "Alternator Repair",
       "Fuse Replacement",
